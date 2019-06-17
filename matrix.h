@@ -77,19 +77,7 @@ matrix *createMatrix()
   }
   return rMat;
 }
-//FIND MATRIX GIVEN ID
-matrix *findM(matrix* head, int idF)
-{
-  matrix *dummy = head;
 
-  while(dummy->id != idF)
-  {
-    dummy = dummy->next;
-    if(dummy == NULL)
-      return NULL;
-  }
-  return dummy;
-}
 //PRINT MATRIX
 void printM(matrix p)
 {
@@ -111,6 +99,20 @@ void printM(matrix p)
         printf(" %3.2f", p.matrix[i][j]);
     }
   }
+}
+
+//FIND MATRIX GIVEN ID
+matrix *findM(matrix* head, int idF)
+{
+  matrix *dummy = head;
+
+  while(dummy->id != idF)
+  {
+    dummy = dummy->next;
+    if(dummy == NULL)
+      return NULL;
+  }
+  return dummy;
 }
 
 //SUBTRACT ROW FROM ALL OTHER ROWS
